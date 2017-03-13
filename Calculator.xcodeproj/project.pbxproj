@@ -13,6 +13,9 @@
 		8025DEF11E75B7BB003C4A6D /* Calculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8025DEEF1E75B7BB003C4A6D /* Calculator.xcdatamodeld */; };
 		8025DEF31E75B7BB003C4A6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8025DEF21E75B7BB003C4A6D /* Assets.xcassets */; };
 		8025DEF61E75B7BB003C4A6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8025DEF41E75B7BB003C4A6D /* LaunchScreen.storyboard */; };
+		8025DEFE1E75C6CE003C4A6D /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8025DEFD1E75C6CE003C4A6D /* Protocols.swift */; };
+		8025DF001E75C8C8003C4A6D /* ViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8025DEFF1E75C8C8003C4A6D /* ViewPresenter.swift */; };
+		8025DF021E75CDA3003C4A6D /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8025DF011E75CDA3003C4A6D /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		8025DEF21E75B7BB003C4A6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8025DEF51E75B7BB003C4A6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8025DEF71E75B7BB003C4A6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8025DEFD1E75C6CE003C4A6D /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Protocols.swift; path = ../Protocols.swift; sourceTree = "<group>"; };
+		8025DEFF1E75C8C8003C4A6D /* ViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPresenter.swift; sourceTree = SOURCE_ROOT; };
+		8025DF011E75CDA3003C4A6D /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Models.swift; path = ../Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 			children = (
 				8025DEE81E75B7BB003C4A6D /* AppDelegate.swift */,
 				8025DEEA1E75B7BB003C4A6D /* ViewController.swift */,
+				8025DF011E75CDA3003C4A6D /* Models.swift */,
+				8025DEFD1E75C6CE003C4A6D /* Protocols.swift */,
+				8025DEFF1E75C8C8003C4A6D /* ViewPresenter.swift */,
 				8025DEEC1E75B7BB003C4A6D /* Main.storyboard */,
 				8025DEF21E75B7BB003C4A6D /* Assets.xcassets */,
 				8025DEF41E75B7BB003C4A6D /* LaunchScreen.storyboard */,
@@ -141,8 +150,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8025DEEB1E75B7BB003C4A6D /* ViewController.swift in Sources */,
+				8025DF001E75C8C8003C4A6D /* ViewPresenter.swift in Sources */,
 				8025DEE91E75B7BB003C4A6D /* AppDelegate.swift in Sources */,
+				8025DF021E75CDA3003C4A6D /* Models.swift in Sources */,
 				8025DEF11E75B7BB003C4A6D /* Calculator.xcdatamodeld in Sources */,
+				8025DEFE1E75C6CE003C4A6D /* Protocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +277,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4M6HC984B7;
 				INFOPLIST_FILE = Calculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = G.Calculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -278,6 +291,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4M6HC984B7;
 				INFOPLIST_FILE = Calculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = G.Calculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
