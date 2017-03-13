@@ -16,6 +16,8 @@
 		8025DEFE1E75C6CE003C4A6D /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8025DEFD1E75C6CE003C4A6D /* Protocols.swift */; };
 		8025DF001E75C8C8003C4A6D /* ViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8025DEFF1E75C8C8003C4A6D /* ViewPresenter.swift */; };
 		8025DF021E75CDA3003C4A6D /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8025DF011E75CDA3003C4A6D /* Models.swift */; };
+		8025DF041E77168B003C4A6D /* MathOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8025DF031E77168B003C4A6D /* MathOperation.swift */; };
+		8025DF061E7718C7003C4A6D /* MathLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8025DF051E7718C7003C4A6D /* MathLogic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		8025DEFD1E75C6CE003C4A6D /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Protocols.swift; path = ../Protocols.swift; sourceTree = "<group>"; };
 		8025DEFF1E75C8C8003C4A6D /* ViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPresenter.swift; sourceTree = SOURCE_ROOT; };
 		8025DF011E75CDA3003C4A6D /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Models.swift; path = ../Models.swift; sourceTree = "<group>"; };
+		8025DF031E77168B003C4A6D /* MathOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MathOperation.swift; path = ../MathOperation.swift; sourceTree = "<group>"; };
+		8025DF051E7718C7003C4A6D /* MathLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MathLogic.swift; path = MathLogic/MathLogic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 		8025DEE71E75B7BB003C4A6D /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				8025DF051E7718C7003C4A6D /* MathLogic.swift */,
+				8025DF031E77168B003C4A6D /* MathOperation.swift */,
 				8025DEE81E75B7BB003C4A6D /* AppDelegate.swift */,
 				8025DEEA1E75B7BB003C4A6D /* ViewController.swift */,
 				8025DF011E75CDA3003C4A6D /* Models.swift */,
@@ -150,6 +156,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8025DEEB1E75B7BB003C4A6D /* ViewController.swift in Sources */,
+				8025DF041E77168B003C4A6D /* MathOperation.swift in Sources */,
+				8025DF061E7718C7003C4A6D /* MathLogic.swift in Sources */,
 				8025DF001E75C8C8003C4A6D /* ViewPresenter.swift in Sources */,
 				8025DEE91E75B7BB003C4A6D /* AppDelegate.swift in Sources */,
 				8025DF021E75CDA3003C4A6D /* Models.swift in Sources */,

@@ -6,9 +6,14 @@ protocol WorkWithView: class{
 protocol CalculatePresenter{
     init(view: WorkWithView)
     
-    func tapButton(tap: Int)
+    func tapNumeralButton(number: String)
     func mathOperation(operation: Int)
-    func makeSpaceBetweenSimbols()
-    
+}
 
+
+//
+protocol MathOperation {
+    var idOperator: String { get } // get - переменную можно только получить  set - изменить 
+    func calculate(operandA: Double, operandB: Double) -> Double
+    
 }

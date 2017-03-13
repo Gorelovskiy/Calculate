@@ -1,38 +1,31 @@
 class ViewPresenter: CalculatePresenter{
-    unowned let view: WorkWithView
-    var currentValue:Double
-    var addValue:Double
+    let view: WorkWithView!
+    
+    var currentValue:Double = 0
+    var addValue:Double = 0
     //
-    var recievedNumber:String
+    var recievedNumber:String = ""
 
     required init(view: WorkWithView){
         self.view = view
-        self.currentValue = 0
-        self.addValue = 0
-        self.recievedNumber = ""
     }
     //
-    func tapButton(tap: Int)
+    func tapNumeralButton(number : String)
     {
         // Inspection count simbols in recievedNubmer
         guard recievedNumber.characters.count < 11 else {return}
         // Inspection count simbols for add space between simbols
         makeSpaceBetweenSimbols()
-        switch tap {
-        case 0 : if(recievedNumber != "0"){ recievedNumber += "0" }
-        case 1: recievedNumber += "1"
-        case 2: recievedNumber += "2"
-        case 3: recievedNumber += "3"
-        case 4: recievedNumber += "4"
-        case 5: recievedNumber += "5"
-        case 6: recievedNumber += "6"
-        case 7: recievedNumber += "7"
-        case 8: recievedNumber += "8"
-        case 9: recievedNumber += "9"
-        default: break
-        }
+        
+        
+        recievedNumber += number
+        
+        //if(recievedNumber != number){ recievedNumber += number }
+        
+        
         view.updateLabelResult(result: recievedNumber)
     }
+    
     //
     func mathOperation(operation: Int)
     {
