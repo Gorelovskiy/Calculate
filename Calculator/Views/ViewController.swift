@@ -6,6 +6,7 @@ class ViewController: UIViewController, ViewUpdateProtocol {
     var presenter: CalculatePresenter!
 
     @IBOutlet weak var labelResult: UILabel!
+    @IBOutlet weak var labelHistory: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +17,9 @@ class ViewController: UIViewController, ViewUpdateProtocol {
     //  Function protocol - ViewUpdateProtocol
     func updateLabelResult(result: String) {
         labelResult.text = result
+    }
+    func updateLabelHistory(result: String) {
+        labelHistory.text = result
     }
 
     // Action taped on number buttons
@@ -34,17 +38,14 @@ class ViewController: UIViewController, ViewUpdateProtocol {
     
     // Action pated on button " AC "
     @IBAction func clearLabel(_ sender: UIButton) {
-        
+        presenter.clearOperation()
     }
     
     // Action taped on button " = "
     @IBAction func buttonEqually(_ sender: UIButton) {
         presenter.calculateResult()
     }
-    // Action taped on button " . "
-    @IBAction func buttonComma(_ sender: UIButton) {
-        
-    }
+   
 
     
 }

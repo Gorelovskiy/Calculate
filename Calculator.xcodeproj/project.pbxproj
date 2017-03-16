@@ -21,6 +21,7 @@
 		8025DF991E786252003C4A6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8025DF941E786252003C4A6D /* AppDelegate.swift */; };
 		8025DF9A1E786252003C4A6D /* Calculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8025DF951E786252003C4A6D /* Calculator.xcdatamodeld */; };
 		8025DF9C1E786AA8003C4A6D /* MathProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8025DF9B1E786AA8003C4A6D /* MathProtocol.swift */; };
+		8025DFA01E79DDA4003C4A6D /* HistoryRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8025DF9F1E79DDA4003C4A6D /* HistoryRepresentation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		8025DF941E786252003C4A6D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8025DF961E786252003C4A6D /* Calculator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Calculator.xcdatamodel; sourceTree = "<group>"; };
 		8025DF9B1E786AA8003C4A6D /* MathProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathProtocol.swift; sourceTree = "<group>"; };
+		8025DF9F1E79DDA4003C4A6D /* HistoryRepresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryRepresentation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				8025DF9B1E786AA8003C4A6D /* MathProtocol.swift */,
 				8025DF2C1E773CF6003C4A6D /* MathOperation.swift */,
 				8025DF2D1E773CF6003C4A6D /* NumberRepresentation.swift */,
+				8025DF9F1E79DDA4003C4A6D /* HistoryRepresentation.swift */,
 			);
 			path = Servises;
 			sourceTree = "<group>";
@@ -146,8 +149,8 @@
 		8025DF901E786252003C4A6D /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
-				8025DF911E786252003C4A6D /* LaunchScreen.storyboard */,
 				8025DF921E786252003C4A6D /* Main.storyboard */,
+				8025DF911E786252003C4A6D /* LaunchScreen.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				8025DF351E773CF6003C4A6D /* presenterEssense.swift in Sources */,
 				8025DF311E773CF6003C4A6D /* MathLogic.swift in Sources */,
 				8025DF341E773CF6003C4A6D /* ViewPresenter.swift in Sources */,
+				8025DFA01E79DDA4003C4A6D /* HistoryRepresentation.swift in Sources */,
 				8025DF331E773CF6003C4A6D /* Operation.swift in Sources */,
 				8025DF391E773CF6003C4A6D /* ViewProtocol.swift in Sources */,
 				8025DF991E786252003C4A6D /* AppDelegate.swift in Sources */,
@@ -389,6 +393,7 @@
 				8025DEFC1E75B7BB003C4A6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
