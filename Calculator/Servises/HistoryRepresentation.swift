@@ -33,5 +33,13 @@ struct HistoryRepresentation {
         representation = [""]
     }
     
+    mutating func historyResult(massive: [String]) -> String{
+        var result: String = ""
+        massive.forEach{ (item) in
+            result += item
+        }
+        return result
+    }
+    
         
 }

@@ -70,16 +70,12 @@ class ViewPresenter: CalculatePresenter{
     
     private func updateView() {
         view.updateLabelResult(result: resultOutput.representation)
-        view.updateLabelHistory(result: historyResult(massive: historyOutput.representation))
+        view.updateLabelHistory(result:
+            historyOutput.historyResult(massive: historyOutput.representation)
+        )
     }
     
-    private func historyResult(massive: [String]) -> String{
-        var result: String = ""
-        for i in 0 ..< massive.count {
-            result += massive[i]
-        }
-        return result
-    }
+    
     
    
 }

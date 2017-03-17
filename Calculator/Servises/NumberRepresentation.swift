@@ -32,15 +32,7 @@ struct NumberRepresentation {
             return
         }
         if isStartingPosition {
-            if label == exampleComma {
-                self.representation = "0"+exampleComma
-                isComma = true
-            } else {
-                self.representation = label
-            }
-            if label != "0" {
-                isZero = false
-            }
+            handlingSituationStartPosition(label: label)
             self.isStartingPosition = false
         } else {
             if label == exampleComma {
@@ -69,6 +61,18 @@ struct NumberRepresentation {
         self.representation = String(result)
     }
     
-   
+    mutating func handlingSituationStartPosition(label: String) {
+        guard label == "0" else {
+            isZero = false
+            if label == exampleComma {
+                self.representation = "0"+exampleComma
+                isComma = true
+            } else {
+                self.representation = label
+            }
+            return
+        }
+    }
+    
    
 }

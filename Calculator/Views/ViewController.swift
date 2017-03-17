@@ -37,12 +37,12 @@ class ViewController: UIViewController, ViewUpdateProtocol {
     
     
     // Action pated on button " AC "
-    @IBAction func clearLabel(_ sender: UIButton) {
+    @IBAction func clearButtonTapd(_ sender: UIButton) {
         presenter.clearOperation()
     }
     
     // Action taped on button " = "
-    @IBAction func buttonEqually(_ sender: UIButton) {
+    @IBAction func equallyButtonTapd(_ sender: UIButton) {
         presenter.calculateResult()
     }
    
