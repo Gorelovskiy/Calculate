@@ -10,30 +10,28 @@ import Foundation
 
 struct HistoryRepresentation {
     
-    var representationValue: [String] = []
-    var representationAction: [String] = []
+    var representation: [String] = [""]
    
-     mutating func addNumberToHistory(result value: String ) {
-       /* guard self.representation.count == 25 else {
-            representation.append(value)
+    mutating func addNumberToHistory(result operation: Operation ) {
+        guard  let operandA = operation.operandA,
+               let operandB = operation.operandB else {
             return
         }
-        for i in 0 ..< 24 {
-            representation[i] = representation[i+1]
+        if representation[0] == "" {
+            representation[0] = String(operandA)
         }
-        representation[24] = value
-         */
+        representation.append(operation.operationId! + String(operandB))
     }
     
     mutating func cleanNumber() {
-        //representation = [""]
+       representation = [""]
     }
     
     mutating func historyResult() -> String{
         var result: String = ""
-       // representation.forEach{ (item) in
-        //    result += item
-       // }
+        representation.forEach { (item) in
+           result += item
+        }
         return result
     }
     

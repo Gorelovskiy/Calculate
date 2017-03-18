@@ -73,13 +73,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Calculator/Presenters/ViewPresenter.swift"
-            timestampString = "511539265.597137"
+            filePath = "Calculator/Servises/History/HistoryRepresentation.swift"
+            timestampString = "511557496.54604"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "tapNumeralButton(number:)"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "addNumberToHistory(result:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

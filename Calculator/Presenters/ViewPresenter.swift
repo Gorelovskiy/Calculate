@@ -18,9 +18,6 @@ class ViewPresenter: CalculatePresenter{
         self.view = view
     }
     
-    //Обработать двойное нажатие дейсвия -  если нет второго числа просто поменять знак
-    // Создать в истории два массива (числа и дейсвия)
-        
     // Processing  number buttons
     func tapNumeralButton(number : String) {
         if operation.operationId == nil {
@@ -31,7 +28,6 @@ class ViewPresenter: CalculatePresenter{
             }
             addSimbols(number: number)
             submitValueFor(operand: resultOutput.representation)
-           
         }
         updateView()
     }
@@ -64,6 +60,7 @@ class ViewPresenter: CalculatePresenter{
     // Processing equal "=" button
     func calculateResult() {
         submitValueFor(operand: resultOutput.representation)
+        historyOutput.addNumberToHistory(result: operation)
         let result = MathOperations().calculate(for: operation)
         // Func prepareFor convert result Dount in String 
         resultOutput.prepareFor(show: result)
