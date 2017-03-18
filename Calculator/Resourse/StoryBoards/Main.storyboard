@@ -24,7 +24,7 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OYw-YV-BIc">
                                 <rect key="frame" x="0.0" y="67" width="375" height="600"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.30070191825986781" green="0.39564651346228669" blue="0.40356570512820511" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANd-Zj-s71">
                                 <rect key="frame" x="0.0" y="557" width="186.5" height="110"/>
@@ -41,7 +41,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="."/>
                                 <connections>
-                                    <action selector="numeralButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BER-tD-bfw"/>
+                                    <action selector="commaButtonTapd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KeN-1F-cTV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeW-XI-vQH">
@@ -50,7 +50,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="="/>
                                 <connections>
-                                    <action selector="buttonEqually:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5zh-UV-5CG"/>
                                     <action selector="equallyButtonTapd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hno-Ig-nBT"/>
                                 </connections>
                             </button>
@@ -105,7 +104,6 @@
                                 <state key="normal" title="AC"/>
                                 <connections>
                                     <action selector="clearButtonTapd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="00d-6x-GWS"/>
-                                    <action selector="clearLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XUV-U4-C7J"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmW-Nl-w45">
@@ -279,6 +277,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonAdd" destination="DGn-Qj-lx5" id="UQq-6o-kMt"/>
+                        <outlet property="buttonDiv" destination="yzG-vE-EF3" id="Bcg-qA-kfK"/>
+                        <outlet property="buttonMul" destination="Z63-hV-EZe" id="bDv-qf-a4t"/>
+                        <outlet property="buttonSub" destination="IOG-cP-GyM" id="wdq-c7-wtV"/>
                         <outlet property="labelHistory" destination="hcP-Zh-IHm" id="Vfk-9W-8zx"/>
                         <outlet property="labelResult" destination="Rad-gT-hfJ" id="u8G-CT-2O6"/>
                     </connections>

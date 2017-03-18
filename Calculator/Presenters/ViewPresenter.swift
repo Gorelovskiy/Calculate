@@ -13,28 +13,50 @@ class ViewPresenter: CalculatePresenter{
     private var operation = Operation()
     private var resultOutput = NumberRepresentation()
     private var historyOutput = HistoryRepresentation()
-    
+   
     required init(view: ViewUpdateProtocol) {
         self.view = view
     }
     
+    //Обработать двойное нажатие дейсвия -  если нет второго числа просто поменять знак
+    // Создать в истории два массива (числа и дейсвия)
+        
     // Processing  number buttons
     func tapNumeralButton(number : String) {
+        if operation.operationId == nil {
+            addSimbols(number: number)
+        } else {
+            if  self.operation.operandA == nil {
+                submitValueFor(operand: resultOutput.representation)
+            }
+            addSimbols(number: number)
+            submitValueFor(operand: resultOutput.representation)
+           
+        }
+        updateView()
+    }
+    
+    private func addSimbols(number: String) {
         if resultOutput.isStartingPosition {
             resultOutput.cleanNumber()
         }
         resultOutput.addNumberTo(result: number)
-        historyOutput.addNumberTo(result: number)
+    }
+    
+    
+    func tapCommaButton() {
+        resultOutput.addComma()
         updateView()
     }
+    
     // Processing  operation buttons
     func setOperationId(operation id: String) {
-        historyOutput.addNumberTo(result: id)
-        if self.operation.operationId != nil {
+        if  operation.operationId != nil &&
+            operation.operandA != nil &&
+            operation.operandB != nil {
             calculateResult()
         }
         operation.operationId = id
-        submitValueFor(operand: resultOutput.representation)
         resultOutput.cleanPosition() 
         updateView()
     }
@@ -45,7 +67,6 @@ class ViewPresenter: CalculatePresenter{
         let result = MathOperations().calculate(for: operation)
         // Func prepareFor convert result Dount in String 
         resultOutput.prepareFor(show: result)
-        
         updateView()
         operation.clean()
     }
@@ -68,13 +89,12 @@ class ViewPresenter: CalculatePresenter{
         operation.operandB = Double(value)
     }
     
-    private func updateView() {
+    func updateView() {
         view.updateLabelResult(result: resultOutput.representation)
         view.updateLabelHistory(result:
-            historyOutput.historyResult(massive: historyOutput.representation)
+            historyOutput.historyResult()
         )
     }
-    
     
     
    
