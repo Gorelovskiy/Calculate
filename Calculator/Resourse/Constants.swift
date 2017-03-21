@@ -8,11 +8,26 @@
 
 import Foundation
 
-enum Constants: Int {
+struct Constants {
+    enum LenghsValidations: Int {
+        case maxCountInNumbers = 11
+        case maxCountsInHistory = 20
+        
+    }
     
-    case pressedBorderLayer = 2
-    case nillBorderLayer = 0
+    enum BorderLayers: Int {
+        case nill = 0
+        case pressed = 2
+        
+    }
     
-    case maxSimbolsInPresentation = 11
-    
+    enum Operation: String {
+        case add = "+"
+        case sub = "-"
+        case mul = "*"
+        case div = "/"
+    }
 }
+
+
+

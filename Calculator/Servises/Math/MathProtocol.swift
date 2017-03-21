@@ -6,7 +6,7 @@
 //  Copyright © 2017 Gorelovskiy. All rights reserved.
 //
 protocol MathOperation {
-    var idOperator: String { get } 
+    var idOperator: Constants.Operation { get }
     func calculate(operandA: Double, operandB: Double) -> Double
     
 }

@@ -23,6 +23,10 @@
 		8025DFB01E7D32D4003C4A6D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8025DFAF1E7D32D4003C4A6D /* Constants.swift */; };
 		8025DFB41E7D5227003C4A6D /* MathOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8025DFB21E7D5227003C4A6D /* MathOperation.swift */; };
 		8025DFB51E7D5227003C4A6D /* MathProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8025DFB31E7D5227003C4A6D /* MathProtocol.swift */; };
+		803211B51E805AFB00B0E31F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803211B41E805AFB00B0E31F /* ViewModel.swift */; };
+		803211BC1E805F9500B0E31F /* ManagerNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803211BB1E805F9500B0E31F /* ManagerNumber.swift */; };
+		803211C01E805FE600B0E31F /* ManagerHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803211BF1E805FE600B0E31F /* ManagerHistory.swift */; };
+		803211C31E8187A700B0E31F /* ControlOfActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803211C21E8187A700B0E31F /* ControlOfActions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,10 @@
 		8025DFAF1E7D32D4003C4A6D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8025DFB21E7D5227003C4A6D /* MathOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathOperation.swift; sourceTree = "<group>"; };
 		8025DFB31E7D5227003C4A6D /* MathProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathProtocol.swift; sourceTree = "<group>"; };
+		803211B41E805AFB00B0E31F /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		803211BB1E805F9500B0E31F /* ManagerNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerNumber.swift; sourceTree = "<group>"; };
+		803211BF1E805FE600B0E31F /* ManagerHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerHistory.swift; sourceTree = "<group>"; };
+		803211C21E8187A700B0E31F /* ControlOfActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlOfActions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +86,7 @@
 				8025DF2E1E773CF6003C4A6D /* Views */,
 				8025DF281E773CF6003C4A6D /* Presenters */,
 				8025DF261E773CF6003C4A6D /* Models */,
+				803211C11E8187A700B0E31F /* Factory */,
 				8025DF221E773CF6003C4A6D /* Managers */,
 				8025DF2B1E773CF6003C4A6D /* Servises */,
 				8025DF8F1E786252003C4A6D /* Resourse */,
@@ -89,6 +98,8 @@
 		8025DF221E773CF6003C4A6D /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				803211BB1E805F9500B0E31F /* ManagerNumber.swift */,
+				803211BF1E805FE600B0E31F /* ManagerHistory.swift */,
 				8025DF231E773CF6003C4A6D /* Math */,
 			);
 			path = Managers;
@@ -106,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				8025DF271E773CF6003C4A6D /* Operation.swift */,
+				803211B41E805AFB00B0E31F /* ViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -191,6 +203,14 @@
 			path = Math;
 			sourceTree = "<group>";
 		};
+		803211C11E8187A700B0E31F /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				803211C21E8187A700B0E31F /* ControlOfActions.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -266,14 +286,18 @@
 			files = (
 				8025DF381E773CF6003C4A6D /* ViewController.swift in Sources */,
 				8025DF9A1E786252003C4A6D /* Calculator.xcdatamodeld in Sources */,
+				803211BC1E805F9500B0E31F /* ManagerNumber.swift in Sources */,
 				8025DFAE1E7D095A003C4A6D /* NumberRepresentation.swift in Sources */,
 				8025DF351E773CF6003C4A6D /* CalculatePresenter.swift in Sources */,
+				803211C01E805FE600B0E31F /* ManagerHistory.swift in Sources */,
 				8025DFB51E7D5227003C4A6D /* MathProtocol.swift in Sources */,
 				8025DF311E773CF6003C4A6D /* MathLogic.swift in Sources */,
+				803211B51E805AFB00B0E31F /* ViewModel.swift in Sources */,
 				8025DFB41E7D5227003C4A6D /* MathOperation.swift in Sources */,
 				8025DFB01E7D32D4003C4A6D /* Constants.swift in Sources */,
 				8025DF341E773CF6003C4A6D /* ViewPresenter.swift in Sources */,
 				8025DF331E773CF6003C4A6D /* Operation.swift in Sources */,
+				803211C31E8187A700B0E31F /* ControlOfActions.swift in Sources */,
 				8025DF391E773CF6003C4A6D /* ViewProtocol.swift in Sources */,
 				8025DFA71E7C866F003C4A6D /* HistoryRepresentation.swift in Sources */,
 				8025DF991E786252003C4A6D /* AppDelegate.swift in Sources */,

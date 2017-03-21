@@ -41,7 +41,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="."/>
                                 <connections>
-                                    <action selector="commaButtonTapd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KeN-1F-cTV"/>
+                                    <action selector="numeralButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CX4-aR-UOV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeW-XI-vQH">

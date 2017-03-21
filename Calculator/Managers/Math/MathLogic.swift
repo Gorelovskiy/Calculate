@@ -20,7 +20,6 @@ struct MathOperations {
     
     // Double? - optional tipe
     func calculate(for operation: Operation) -> Double? {
-        
         var result: Double?
         // Retrieval(извлечение) operands and operationID  from model Operation
         guard let operandA = operation.operandA,
@@ -28,9 +27,8 @@ struct MathOperations {
               let id = operation.operationId else {
                 return result
         }
-        
         calculations.forEach { (item) in
-            if item.idOperator == id {
+            if item.idOperator.rawValue == id {
                result =  item.calculate(operandA: operandA, operandB: operandB)
             }
         }

@@ -30,10 +30,10 @@ class ViewController: UIViewController, ViewUpdateProtocol {
     }
     
     func dropedBorderWidthButtons() {
-        buttonAdd.layer.borderWidth = CGFloat(Constants.nillBorderLayer.rawValue)
-        buttonSub.layer.borderWidth = CGFloat(Constants.nillBorderLayer.rawValue)
-        buttonMul.layer.borderWidth = CGFloat(Constants.nillBorderLayer.rawValue)
-        buttonDiv.layer.borderWidth = CGFloat(Constants.nillBorderLayer.rawValue)
+        buttonAdd.layer.borderWidth = CGFloat(Constants.BorderLayers.nill.rawValue)
+        buttonSub.layer.borderWidth = CGFloat(Constants.BorderLayers.nill.rawValue)
+        buttonMul.layer.borderWidth = CGFloat(Constants.BorderLayers.nill.rawValue)
+        buttonDiv.layer.borderWidth = CGFloat(Constants.BorderLayers.nill.rawValue)
     }
 
     // Action taped on number buttons
@@ -43,16 +43,12 @@ class ViewController: UIViewController, ViewUpdateProtocol {
         }
     }
     
-    @IBAction func commaButtonTapd(_ sender: UIButton) {
-        presenter.tapCommaButton()
-    }
-    
     // Action taped on operation buttons
     @IBAction func operationButtonTapd(_ sender: UIButton) {
         dropedBorderWidthButtons()
         if let number = sender.titleLabel?.text {
             presenter.setOperationId(operation: number)
-            sender.layer.borderWidth = CGFloat(Constants.pressedBorderLayer.rawValue)
+            sender.layer.borderWidth = CGFloat(Constants.BorderLayers.pressed.rawValue)
         }
     }
     

@@ -10,30 +10,42 @@ import Foundation
 
 struct HistoryRepresentation {
     
-    var representation: [String] = [""]
-   
+    var representationValue: [String] = []
+    var representationOperation: [String] = []
+    
     mutating func addNumberToHistory(result operation: Operation ) {
         guard  let operandA = operation.operandA,
                let operandB = operation.operandB else {
             return
         }
-        if representation[0] == "" {
-            representation[0] = String(operandA)
+        if representationValue.count == 0 {
+            representationValue.append(String(operandA))
         }
-        representation.append(operation.operationId! + String(operandB))
+        representationValue.append(operation.operationId! + String(operandB))
+        
+        while toCountRepresentationSimbols() >  LenghsValudation.maxCountsInHistory.rawValue {
+            representationValue.remove(at: 0)
+        }
     }
     
     mutating func cleanNumber() {
-       representation = [""]
+       representationValue = []
     }
     
     mutating func historyResult() -> String{
         var result: String = ""
-        representation.forEach { (item) in
+        representationValue.forEach { (item) in
            result += item
         }
         return result
     }
     
+    mutating func toCountRepresentationSimbols() -> Int {
+        var result: Int = 0
+        representationValue.forEach { (item) in
+            result += item.characters.count
+        }
+        return result
+    }
         
 }

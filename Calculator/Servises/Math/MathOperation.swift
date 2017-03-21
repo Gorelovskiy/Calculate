@@ -9,8 +9,8 @@ import Foundation
 
 struct Additution : MathOperation {
     
-    var idOperator: String {
-        return "+"
+    var idOperator: Constants.Operation {
+      return Constants.Operation.add
     }
     
     func calculate(operandA: Double, operandB: Double) -> Double {
@@ -20,8 +20,8 @@ struct Additution : MathOperation {
 
 struct Substruction : MathOperation {
     
-    var idOperator: String {
-        return "-"
+    var idOperator: Constants.Operation {
+        return Constants.Operation.sub
     }
     
     func calculate(operandA: Double, operandB: Double) -> Double {
@@ -31,8 +31,8 @@ struct Substruction : MathOperation {
 
 struct Multiplication : MathOperation {
     
-    var idOperator: String {
-        return "*"
+    var idOperator: Constants.Operation {
+        return Constants.Operation.mul
     }
     
     func calculate(operandA: Double, operandB: Double) -> Double {
@@ -42,8 +42,8 @@ struct Multiplication : MathOperation {
 
 struct Division : MathOperation {
     
-    var idOperator: String {
-        return "/"
+    var idOperator: Constants.Operation {
+        return Constants.Operation.div
     }
     
     func calculate(operandA: Double, operandB: Double) -> Double {
