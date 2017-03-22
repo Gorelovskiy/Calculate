@@ -13,23 +13,26 @@ struct HistoryRepresentation {
     var representationValue: [String] = []
     var representationOperation: [String] = []
     
-    mutating func addNumberToHistory(result operation: Operation ) {
+    mutating func addNumberToHistory(result operation: Operation ) -> String {
+        print(operation)
         guard  let operandA = operation.operandA,
                let operandB = operation.operandB else {
-            return
+            return historyResult()
         }
         if representationValue.count == 0 {
             representationValue.append(String(operandA))
         }
         representationValue.append(operation.operationId! + String(operandB))
-        
+               
         while toCountRepresentationSimbols() >  LenghsValudation.maxCountsInHistory.rawValue {
             representationValue.remove(at: 0)
         }
+        return historyResult()
     }
     
-    mutating func cleanNumber() {
-       representationValue = []
+    mutating func cleanNumber() -> String {
+        representationValue = []
+        return historyResult()
     }
     
     mutating func historyResult() -> String{

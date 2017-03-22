@@ -41,6 +41,14 @@ struct ManagerNumber {
         return resultOutput.representation
     }
     
+    mutating func clearFields(operation: Operation) -> String {
+        operationObject = operation
+        operationObject.clean()
+        resultOutput.cleanNumber()
+        resultOutput.cleanPosition()
+        return resultOutput.representation
+    }
+    
     
     
     private mutating func calculateLogicAdd(simbol number: String) {

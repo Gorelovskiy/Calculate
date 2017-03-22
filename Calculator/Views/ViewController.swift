@@ -4,7 +4,13 @@ import UIKit
 class ViewController: UIViewController, ViewUpdateProtocol {
     
     var presenter: CalculatePresenter!
-
+    var viewModel: ViewModel = ViewModel(labelHistory: "", labelPresentation: "0") {
+        didSet {
+            labelResult.text = viewModel.labelPresentation
+            labelHistory.text = viewModel.labelHistory
+        }
+    }
+    
     @IBOutlet weak var labelResult: UILabel!
     @IBOutlet weak var labelHistory: UILabel!
     
@@ -13,21 +19,12 @@ class ViewController: UIViewController, ViewUpdateProtocol {
     @IBOutlet weak var buttonMul: UIButton!
     @IBOutlet weak var buttonDiv: UIButton!
     
-  
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Initial
         self.presenter =  ViewPresenter(view: self)
     }
-    
-    //  Function protocol - ViewUpdateProtocol
-    func updateLabelResult(result: String) {
-        labelResult.text = result
-    }
-    func updateLabelHistory(result: String) {
-        labelHistory.text = result
-    }
+   
     
     func dropedBorderWidthButtons() {
         buttonAdd.layer.borderWidth = CGFloat(Constants.BorderLayers.nill.rawValue)
@@ -36,6 +33,7 @@ class ViewController: UIViewController, ViewUpdateProtocol {
         buttonDiv.layer.borderWidth = CGFloat(Constants.BorderLayers.nill.rawValue)
     }
 
+    
     // Action taped on number buttons
     @IBAction func numeralButton(_ sender: UIButton) {
         if let number = sender.titleLabel?.text {
@@ -51,7 +49,6 @@ class ViewController: UIViewController, ViewUpdateProtocol {
             sender.layer.borderWidth = CGFloat(Constants.BorderLayers.pressed.rawValue)
         }
     }
-    
     
     // Action pated on button " AC "
     @IBAction func clearButtonTapd(_ sender: UIButton) {

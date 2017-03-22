@@ -17,44 +17,26 @@ class ViewPresenter: CalculatePresenter{
     
     // Processing  number buttons
     func tapNumeralButton(number : String) {
-        updateView(viewModel: controlOfActions.ToCalculateResultOfTaped(number: number))
+        view.viewModel = controlOfActions.toCalculateResultOfTaped(number: number)
     }
     
 
     
     // Processing  operation buttons
     func setOperationId(operation id: String) {
-       updateView(viewModel: controlOfActions.ToCalculateResultOfTaped(operationId: id))
+       view.viewModel = controlOfActions.toCalculateResultOfTaped(operationId: id)
      
     }
     
     // Processing equal "=" button
     func calculateResult() {
-        updateView(viewModel: controlOfActions.ToCalculateResultOperation())
+        view.viewModel = controlOfActions.toCalculateResultOperation()
     }
     
     func clearOperation() {
-        /*
-        operation.clean()
-        historyOutput.cleanNumber()
-        resultOutput.cleanNumber()
-        resultOutput.cleanPosition()
-        updateView()
-         */
+        view.viewModel = controlOfActions.clearAllFields()
         
     }
-    
-    
-    
-    private func updateView(viewModel: ViewModel) {
-        guard let presentation = viewModel.labelPresentation,
-              let history = viewModel.labelHistory else {
-            return
-        }
-        view.updateLabelResult(result: presentation)
-        view.updateLabelHistory(result: history)
-    }
-    
     
    
 }

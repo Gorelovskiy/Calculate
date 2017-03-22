@@ -25,7 +25,6 @@
 		8025DFB51E7D5227003C4A6D /* MathProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8025DFB31E7D5227003C4A6D /* MathProtocol.swift */; };
 		803211B51E805AFB00B0E31F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803211B41E805AFB00B0E31F /* ViewModel.swift */; };
 		803211BC1E805F9500B0E31F /* ManagerNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803211BB1E805F9500B0E31F /* ManagerNumber.swift */; };
-		803211C01E805FE600B0E31F /* ManagerHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803211BF1E805FE600B0E31F /* ManagerHistory.swift */; };
 		803211C31E8187A700B0E31F /* ControlOfActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803211C21E8187A700B0E31F /* ControlOfActions.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,7 +48,6 @@
 		8025DFB31E7D5227003C4A6D /* MathProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathProtocol.swift; sourceTree = "<group>"; };
 		803211B41E805AFB00B0E31F /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		803211BB1E805F9500B0E31F /* ManagerNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerNumber.swift; sourceTree = "<group>"; };
-		803211BF1E805FE600B0E31F /* ManagerHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerHistory.swift; sourceTree = "<group>"; };
 		803211C21E8187A700B0E31F /* ControlOfActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlOfActions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				803211BB1E805F9500B0E31F /* ManagerNumber.swift */,
-				803211BF1E805FE600B0E31F /* ManagerHistory.swift */,
 				8025DF231E773CF6003C4A6D /* Math */,
 			);
 			path = Managers;
@@ -289,7 +286,6 @@
 				803211BC1E805F9500B0E31F /* ManagerNumber.swift in Sources */,
 				8025DFAE1E7D095A003C4A6D /* NumberRepresentation.swift in Sources */,
 				8025DF351E773CF6003C4A6D /* CalculatePresenter.swift in Sources */,
-				803211C01E805FE600B0E31F /* ManagerHistory.swift in Sources */,
 				8025DFB51E7D5227003C4A6D /* MathProtocol.swift in Sources */,
 				8025DF311E773CF6003C4A6D /* MathLogic.swift in Sources */,
 				803211B51E805AFB00B0E31F /* ViewModel.swift in Sources */,
