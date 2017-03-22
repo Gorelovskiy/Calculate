@@ -23,7 +23,7 @@ struct HistoryRepresentation {
             representationValue.append(String(operandA))
         }
         representationValue.append(operation.operationId! + String(operandB))
-               
+        
         while toCountRepresentationSimbols() >  LenghsValudation.maxCountsInHistory.rawValue {
             representationValue.remove(at: 0)
         }
